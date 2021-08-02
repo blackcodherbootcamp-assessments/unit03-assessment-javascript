@@ -1,4 +1,4 @@
-let dates = [
+const dates = [
 	{
 		"date": "2600 BC",
 		"title": "Yeast",
