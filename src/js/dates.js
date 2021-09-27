@@ -1,46 +1,93 @@
-const dates = [
+export const dates = [
 	{
-		"date": "2600 BC",
-		"title": "Yeast",
-		"caption": "The Egyptians were also pioneers in baking as the first recorded civilization to use yeast in their bread as long ago as 2600 BC.",
-		"image": ""
+	  date: "10th April 2019",
+	  title: "I love cake jelly-o.",
+	  caption:
+		"I love tiramisu cheesecake sugar plum. Tootsie roll pastry soufflé jelly-o pudding chocolate bar. I love croissant jelly pudding. Oat cake I love I love cake.",
+	  image: "https://via.placeholder.com/300",
+	  details:
+		"Apple pie tiramisu cotton candy chocolate I love soufflé I love lollipop. Brownie tart candy canes marshmallow ice cream muffin ice cream. Lollipop sweet roll halvah chocolate wafer lemon drops marshmallow. Chocolate bar muffin sweet roll chupa chups gummies croissant oat cake I love. I love cake jelly-o. Gummi bears candy canes I love chupa chups I love jelly I love. Cake cheesecake dessert lollipop sesame snaps lemon drops dessert.",
 	},
 	{
-		"date": "1069",
-		"title": "Sugar",
-		"caption": "Sugar was a luxury in Europe until the early 19th century. The first sugar was recorded in England in 1069.",
-		"image": ""
+	  date: "11th May 2019",
+	  title: "Ice cream candy lemon drops",
+	  caption:
+		"Danish marshmallow marshmallow bonbon candy I love. Bonbon topping marshmallow pudding. Chocolate fruitcake sugar plum. Powder cake sweet sugar plum marshmallow.",
+	  image: "https://via.placeholder.com/300",
+	  details:
+		"Bear claw sesame snaps sesame snaps ice cream marshmallow gummies. Tootsie roll fruitcake liquorice lemon drops biscuit lollipop chocolate cake dessert. Liquorice chocolate bar tart cheesecake jelly-o sugar plum.",
 	},
 	{
-		"date": "1494",
-		"title": "Icing Sugar",
-		"caption": "Icing sugar was invented. It was originally used as a topping for marchpanes, an almond and sugar dessert.",
-		"image": ""
+	  date: "12th June 2019",
+	  title: "Tootsie roll fruitcake",
+	  caption:
+		"Halvah candy soufflé. Cotton candy lemon drops apple pie jelly halvah. Cake chocolate bar bonbon sweet roll.",
+	  image: "https://via.placeholder.com/300",
+	  details:
+		"Apple pie tiramisu cotton candy chocolate I love soufflé I love lollipop. Brownie tart candy canes marshmallow ice cream muffin ice cream. Lollipop sweet roll halvah chocolate wafer lemon drops marshmallow. Chocolate bar muffin sweet roll chupa chups gummies croissant oat cake I love. I love cake jelly-o. Gummi bears candy canes I love chupa chups I love jelly I love. Cake cheesecake dessert lollipop sesame snaps lemon drops dessert.",
 	},
 	{
-		"date": "1700s",
-		"title": "Soufflé",
-		"caption": "Soufflé appears in France. Cakes and pastries also begin to appear, thanks to the increasing availability of sugar and the rising of the chef profession",
-		"image": ""
+	  date: "13th July 2019",
+	  title: "I love soufflé",
+	  caption:
+		"Ice cream candy lemon drops. Halvah donut chocolate cake sesame snaps powder gingerbread pie lemon drops caramels. Jelly pastry toffee gummi bears tart sweet roll.",
+	  image: "https://via.placeholder.com/300",
+	  details:
+		"Bear claw sesame snaps sesame snaps ice cream marshmallow gummies. Tootsie roll fruitcake liquorice lemon drops biscuit lollipop chocolate cake dessert. Liquorice chocolate bar tart cheesecake jelly-o sugar plum.",
 	},
 	{
-		"date": "1779",
-		"title": "Flour",
-		"caption": "Although the earliest archaeological evidence for wheat seeds crushed between simple millstones to make flour dates to 6000 BC. The Romans were the first to grind seeds on cone mills. In 1779, at the beginning of the Industrial Era, the first steam mill was erected in London.",
-		"image": ""
+	  date: "14th August 2019",
+	  title: "I love lollipop",
+	  caption:
+		"Ice cream candy lemon drops. Halvah donut chocolate cake sesame snaps powder gingerbread pie lemon drops caramels. Jelly pastry toffee gummi bears tart sweet roll.",
+	  image: "https://via.placeholder.com/300",
+	  details:
+		"Apple pie tiramisu cotton candy chocolate I love soufflé I love lollipop. Brownie tart candy canes marshmallow ice cream muffin ice cream. Lollipop sweet roll halvah chocolate wafer lemon drops marshmallow. Chocolate bar muffin sweet roll chupa chups gummies croissant oat cake I love. I love cake jelly-o. Gummi bears candy canes I love chupa chups I love jelly I love. Cake cheesecake dessert lollipop sesame snaps lemon drops dessert.",
 	},
 	{
-		"date": "1843",
-		"title": "Baking Powder",
-		"caption": "The first modern version of baking powder was discovered and manufactured by Alfred Bird (1811-1878), British chemist and founder of Bird and Sons Ltd. His improved version of baking powder was created so he could make yeast-free bread for his wife, Elizabeth, who had allergies to eggs and yeast.",
-		"image": ""
+	  date: "15th March 2020",
+	  title: "Liquorice chocolate bar tart cheesecake",
+	  caption:
+		"Ice cream candy lemon drops. Halvah donut chocolate cake sesame snaps powder gingerbread pie lemon drops caramels. Jelly pastry toffee gummi bears tart sweet roll.",
+	  image: "https://via.placeholder.com/300",
+	  details:
+		"Bear claw sesame snaps sesame snaps ice cream marshmallow gummies. Tootsie roll fruitcake liquorice lemon drops biscuit lollipop chocolate cake dessert. Liquorice chocolate bar tart cheesecake jelly-o sugar plum.",
 	},
 	{
-		"date": "1856",
-		"title": "Food Colouring",
-		"caption": "William Henry Perkin discovered the first synthetic organic dye, called mauve, used to colour foods, drugs, and cosmetics.",
-		"image": ""
-	}
-];
-
-export { dates };
+	  date: "16th April 2020",
+	  title: "Ice cream candy lemon drops",
+	  caption:
+		"Ice cream candy lemon drops. Halvah donut chocolate cake sesame snaps powder gingerbread pie lemon drops caramels. Jelly pastry toffee gummi bears tart sweet roll.",
+	  image: "https://via.placeholder.com/300",
+	  details:
+		"Bear claw sesame snaps sesame snaps ice cream marshmallow gummies. Tootsie roll fruitcake liquorice lemon drops biscuit lollipop chocolate cake dessert. Liquorice chocolate bar tart cheesecake jelly-o sugar plum.",
+	},
+	{
+	  date: "17th May 2020",
+	  title: "Ice cream candy lemon drops",
+	  caption:
+		"Ice cream candy lemon drops. Halvah donut chocolate cake sesame snaps powder gingerbread pie lemon drops caramels. Jelly pastry toffee gummi bears tart sweet roll.",
+	  image: "https://via.placeholder.com/300",
+	  details:
+		"Bear claw sesame snaps sesame snaps ice cream marshmallow gummies. Tootsie roll fruitcake liquorice lemon drops biscuit lollipop chocolate cake dessert. Liquorice chocolate bar tart cheesecake jelly-o sugar plum.",
+	},
+	{
+	  date: "18th June 2020",
+	  title: "Ice cream candy lemon drops",
+	  caption:
+		"Ice cream candy lemon drops. Halvah donut chocolate cake sesame snaps powder gingerbread pie lemon drops caramels. Jelly pastry toffee gummi bears tart sweet roll.",
+	  image: "https://via.placeholder.com/300",
+	  details:
+		"Bear claw sesame snaps sesame snaps ice cream marshmallow gummies. Tootsie roll fruitcake liquorice lemon drops biscuit lollipop chocolate cake dessert. Liquorice chocolate bar tart cheesecake jelly-o sugar plum.",
+	},
+	{
+	  date: "19th July 2020",
+	  title: "Ice cream candy lemon drops",
+	  caption:
+		"Ice cream candy lemon drops. Halvah donut chocolate cake sesame snaps powder gingerbread pie lemon drops caramels. Jelly pastry toffee gummi bears tart sweet roll.",
+	  image: "https://via.placeholder.com/300",
+	  details:
+		"Bear claw sesame snaps sesame snaps ice cream marshmallow gummies. Tootsie roll fruitcake liquorice lemon drops biscuit lollipop chocolate cake dessert. Liquorice chocolate bar tart cheesecake jelly-o sugar plum.",
+	},
+  ];
+  
