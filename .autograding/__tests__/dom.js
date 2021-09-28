@@ -18,6 +18,10 @@ describe("DOM", function () {
     jest.resetModules();
   });
 
+  test('body contains exactly one <div /> element with the class name "timeline"', () => {
+    expect(document.querySelectorAll('body div.timeline').length).toBe(1);
+  });
+
   test("found expected timeline item content", () => {
     const timelineElements = [
       ...document.querySelectorAll(".timeline .timeline-item"),
