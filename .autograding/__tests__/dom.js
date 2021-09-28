@@ -2,15 +2,15 @@
  * @jest-environment jsdom
  */
 const { parseHTML, readFile } = require("../setup.js");
-const { dates } = require("../../src/js/data.js");
-const html = readFile("../src/index.html");
+const { dates } = require("../../js/data.js");
+const html = readFile("../index.html");
 const doc = parseHTML(html);
 
 // HTML tests
 describe("DOM", function () {
   beforeAll(() => {
     document.documentElement.innerHTML = html.toString();
-    require("../../src/js/index.js");
+    require("../../js/index.js");
   });
 
   afterAll(() => {

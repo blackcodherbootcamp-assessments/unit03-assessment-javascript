@@ -1,5 +1,5 @@
 const { parseHTML, readFile } = require('../setup.js');
-const html = readFile('../src/index.html');
+const html = readFile('../index.html');
 const doc = parseHTML(html);
 
 // HTML tests
