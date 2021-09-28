@@ -1,10 +1,13 @@
 /**
  * @jest-environment jsdom
  */
-const { parseHTML, readFile } = require("../setup.js");
+const { parseHTML, parseCSS, readFile } = require("../setup.js");
 const { dates } = require("../../js/data.js");
 const html = readFile("../index.html");
 const doc = parseHTML(html);
+const css = parseCSS(readFile('../css/main.css'));
+const readMe = readFile('../README.md');
+const badgeRegex = /\[\!\[Netlify Status]\(https:\/\/api\.netlify\.com\/api\/v1\/badges\/[-a-f0-9]+\/deploy-status\)]\([^)]+\)/g;
 
 // HTML tests
 describe("DOM", function () {
@@ -16,6 +19,31 @@ describe("DOM", function () {
   afterAll(() => {
     // restore the original func after test
     jest.resetModules();
+  });
+
+  test('contains <!DOCTYPE html> declaration', () => {
+    expect(doc.childNodes[0].rawText.match(/^<!DOCTYPE html>/)).toBeTruthy();
+  });
+
+  test('<html /> element contains "lang" attribute', () => {
+    expect(doc.querySelectorAll('html').length).toBe(1);
+    expect(doc.querySelector('html').getAttribute('lang')).toBeTruthy();
+  });
+
+  test('contains exactly one <title /> element', () => {
+    expect(doc.querySelectorAll('head title').length).toBe(1);
+  });
+
+  test('contains exactly one <meta charset="" /> element', () => {
+    expect(doc.querySelectorAll('head meta[charset]').length).toBe(1);
+  });
+
+  test('contains exactly one <link /> element pointing to the "css/main.css" stylesheet', () => {
+    expect(doc.querySelectorAll('head link[rel=stylesheet]').length).toBeGreaterThan(0);
+    expect(
+      doc.querySelectorAll('head link[rel=stylesheet]')
+      .filter(link => link.getAttribute('href').indexOf('css/main.css') >= 0).length
+    ).toBe(1);
   });
 
   test('body contains exactly one <div /> element with the class name "timeline"', () => {
@@ -81,5 +109,18 @@ describe("DOM", function () {
     expect(dateElement).not.toEqual(null);
     expect(titleElement).not.toEqual(null);
     expect(imageElement).not.toEqual(null);
+  });
+});
+
+// CSS tests
+describe('css/main.css', () => {
+  test('file found', () => {
+      expect(css).toBeTruthy();
+  });
+});
+
+describe('README.md', () => {
+  test('status badge found', () => {
+    expect(readMe.match(badgeRegex).length).toBeGreaterThan(0);
   });
 });
