@@ -24,7 +24,7 @@ h2 {
   flex-direction: column;
 }
 
-#card-wrapper {
+#modal-wrapper {
   display: none;
   position: fixed;
   z-index: 1;
@@ -41,29 +41,29 @@ h2 {
   flex-direction: column;
 }
 
-#close-button {
+#modal-close-button {
   cursor: pointer;
   width: 33px;
   height: 33px;
 }
 
-#close-button:before, #close-button:after {
-  position: fixed;
+#modal-close-button:before, #modal-close-button:after {
+  position: absolute;
   content: ' ';
   height: 33px;
   width: 2px;
   background-color: darkslategray;
 }
 
-#close-button:before {
+#modal-close-button:before {
   transform: rotate(45deg);
 }
 
-#close-button:after {
+#modal-close-button:after {
   transform: rotate(-45deg);
 }
 
-#card-header {
+#modal-header {
   display: flex;
   justify-content: space-between;
   justify-self: stretch;
@@ -71,7 +71,7 @@ h2 {
   margin-bottom: 1em;
 }
 
-#card-content {
+#modal-content {
   width: 30em;
   display: flex;
   justify-content: center;
@@ -82,6 +82,10 @@ h2 {
   border-radius: 0.5em;
   box-shadow: rgba(59, 4, 47, 0.315) 20px 20px 30px -10px;
   color: darkslategray;
+}
+
+#modal-image {
+  max-height: 200px;
 }
 
 .timeline {
