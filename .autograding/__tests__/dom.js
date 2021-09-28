@@ -55,4 +55,27 @@ describe("DOM", function () {
 
     expect(dates.length).toBe(listedDates.length);
   });
+
+  test("found expected modal content", () => {
+    let modalElement = null;
+    let dateElement = null;
+    let titleElement = null;
+    let imageElement = null;
+    // select first opener element
+    const openerElement = document.querySelector(".timeline .timeline-item-more-info");
+    
+    if(openerElement){
+      openerElement.click();
+
+      modalElement = document.querySelector("div#modal-container");
+      dateElement = document.querySelector("div#modal-container #modal-date");
+      titleElement = document.querySelector("div#modal-container #modal-title");
+      imageElement = document.querySelector("div#modal-container img#modal-image");
+    }
+
+    expect(modalElement).not.toEqual(null);
+    expect(dateElement).not.toEqual(null);
+    expect(titleElement).not.toEqual(null);
+    expect(imageElement).not.toEqual(null);
+  });
 });

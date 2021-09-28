@@ -27,21 +27,21 @@ We have provided some initial user stories. Your group can choose which project 
 We have provided two files to get you started:
 
 1. `index.html`
-1. `data.js`
+1. `js/data.js`
 
 ### HTML
 
 The provided `index.html` includes:
 
 ```html
-<script type="module" src="index.js"></script>
+<script type="module" src="js/index.js"></script>
 ```
 
-Having `type="module"` means you can the ES6 feature `modules` (refer to the slides for a reminder of what `modules` are). `src="index.js"` indicates your main javascript file must be named `index.js`.
+Having `type="module"` means you can the ES6 feature `modules` (refer to the slides for a reminder of what `modules` are). `src="js/index.js"` indicates your main javascript file must be named `index.js` within the `js` directory.
 
 ### Data
 
-We have provided an array of objects with the data that should be displayed in your timeline. This data can be found in the `data.js` file and must be imported into your `index.js` so you can use it. If you chose, you can add more data to the file, but this is the minimum amount of data you must display in your timeline.
+We have provided an array of objects with the data that should be displayed in your timeline. This data can be found in the `js/data.js` file and must be imported into your `js/index.js` so you can use it. If you choose, you can add more data to the file, but this is the minimum amount of data you must display in your timeline.
 
 ## Assessment Criteria
 
@@ -55,18 +55,18 @@ The only HTML you should add to the `body` is in step 1. Everything else should 
       1. The element that displays the summary text must have the class name `timeline-item-summary`
       1. The element that opens the modal so that a visitor can see full information must have the class name `timeline-item-more-info`
 1. Inside the modal (where the full information should be displayed) you must include the following:
-   1. The container `div` must have the class name `modal-container`
-   1. The date must have the class name `modal-date`
-   1. The title must have the class name `modal-title`
-   1. The image must have the class name `modal-image`
-   1. The full description must have the class nane `modal-description-text`
-   1. The element that closes the modal must have the class name `modal-close-button`
-1. Create an external stylesheet here `styles/main.css` (see [CSS](#css) for more info)
+   1. The container `div` must have the id `modal-container`
+   1. The date must have the id `modal-date`
+   1. The title must have the id `modal-title`
+   1. The image must have the id `modal-image`
+   1. The full description must have the id `modal-full-description`
+   1. The element that closes the modal must have the id `modal-close-button`
+1. Create an external stylesheet here `css/main.css` (see [CSS](#css) for more info)
 1. [Deployed to Netlify](https://docs.netlify.com/site-deploys/create-deploys/) and your [site's status badge](https://docs.netlify.com/monitor-sites/status-badges/) added to this file (`README.md`)
 
 ### CSS
 
-All stylings (css) is completely up to you, but must be in a folder named `styles`.
+All styling (CSS) is completely up to you, but must be in a folder named `css` with a primary stylesheet called `main.css`.
 
 ## How to submit
 

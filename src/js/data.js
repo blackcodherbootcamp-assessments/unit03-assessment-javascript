@@ -10,7 +10,7 @@ export const dates = [
   },
   {
     title: "Sugar",
-    date: "1069",
+    date: "1069 AD",
     fullDescription:
       "Sugar was a luxury in Europe until the early 19th century. The first sugar was recorded in England in 1069.",
     image: "https://erajournal.co.uk/wp-content/uploads/2021/01/sugar-FI.png",
@@ -18,7 +18,7 @@ export const dates = [
   },
   {
     title: "Icing sugar",
-    date: "1494",
+    date: "1494 AD",
     fullDescription:
       "Icing sugar was invented. It was originally used as a topping for marchpanes, an almond and sugar dessert.",
     image:
@@ -27,7 +27,7 @@ export const dates = [
   },
   {
     title: "Soufflé",
-    date: "1700s",
+    date: "1700s AD",
     fullDescription:
       "Soufflé appears in France. Cakes and pastries also begin to appear, thanks to the increasing availability of sugar and the rising of the chef profession",
     image:
@@ -36,7 +36,7 @@ export const dates = [
   },
   {
     title: "Milling",
-    date: "1779",
+    date: "1779 AD",
     fullDescription:
       "Although the earliest archaeological evidence for wheat seeds crushed between simple millstones to make flour dates to 6000 BC. The Romans were the first to grind seeds on cone mills. In 1779, at the beginning of the Industrial Era, the first steam mill was erected in London.",
     image:
@@ -45,7 +45,7 @@ export const dates = [
   },
   {
     title: "Baking powder",
-    date: "1843",
+    date: "1843 AD",
     fullDescription:
       "The first modern version of baking powder was discovered and manufactured by Alfred Bird (1811-1878), British chemist and founder of Bird and Sons Ltd. His improved version of baking powder was created so he could make yeast-free bread for his wife, Elizabeth, who had allergies to eggs and yeast.",
     image:
@@ -55,7 +55,7 @@ export const dates = [
   },
   {
     title: "Synthetic organic dye",
-    date: "1856",
+    date: "1856 AD",
     fullDescription:
       "William Henry Perkin discovered the first synthetic organic dye, called mauve, used to colour foods, drugs, and cosmetics.",
     image:
