@@ -1,32 +1,58 @@
 /**
  * @jest-environment jsdom
  */
-const { parseHTML, readFile } = require('../setup.js');
-const { dates } = require('../../src/js/dates.js');
-const html = readFile('../src/index.html');
+const { parseHTML, readFile } = require("../setup.js");
+const { dates } = require("../../src/js/data.js");
+const html = readFile("../src/index.html");
 const doc = parseHTML(html);
 
 // HTML tests
-describe('DOM', function () {
-    beforeAll(() => {
-        document.documentElement.innerHTML = html.toString();
-        require('../../src/js/index.js');
-    });
+describe("DOM", function () {
+  beforeAll(() => {
+    document.documentElement.innerHTML = html.toString();
+    require("../../src/js/index.js");
+  });
 
-    afterAll(() => {
-        // restore the original func after test
-        jest.resetModules();
-    });
+  afterAll(() => {
+    // restore the original func after test
+    jest.resetModules();
+  });
 
-    test('found timeline items', () => {
-        expect(document.getElementsByClassName('timeline-item').length).toBeGreaterThanOrEqual(dates.length);
-    });
+  test("found expected timeline item content", () => {
+    const timelineElements = [
+      ...document.querySelectorAll(".timeline .timeline-item"),
+    ];
+    // generate unique IDs to enable base element matching
+    for(let i = 0; i < timelineElements.length; i++){
+        const context = timelineElements[i];
+        const id = context.getAttribute( "id" )
 
-    test('found expected timeline item content', () => {
-        const headings = document.querySelectorAll('.timeline .timeline-item h2');
-        const spans = document.querySelectorAll('.timeline .timeline-item span.date');
-        
-        expect(headings.length).toBeGreaterThanOrEqual(dates.length);
-        expect(spans.length).toBe(headings.length);
-    });
+        if(!id){
+            context.setAttribute( "id", `__generated__${i}`);
+        }
+    }
+
+    // return all source data items that match a rendered element
+    // by comparing the title, date and summary values
+    const listedDates = dates.filter(
+      (dateItem) =>
+        typeof timelineElements.find((el) => {
+          const id = el.getAttribute("id");
+          const titleElement = el.querySelector(`#${id} h2.timeline-item-title`);
+          const dateElement = el.querySelector(`#${id} span.timeline-item-date`);
+          const summaryElement = el.querySelector(`#${id} .timeline-item-summary`);
+
+          return (
+            dateItem.title ===
+              (titleElement ? titleElement.textContent.trim() : "") &&
+            dateItem.date ===
+              (dateElement ? dateElement.textContent.trim() : "") &&
+            dateItem.summary ===
+              (summaryElement ? summaryElement.textContent.trim() : "")
+          );
+        }) !== 'undefined'
+    );
+
+    expect(dates.length).toBe(listedDates.length);
+  });
 });
